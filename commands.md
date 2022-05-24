@@ -27,4 +27,4 @@
     > will not swith to the created branch.
 
 - one you have created a new branch, we can switch to it
-``` git switch <branch-name>```
+``` git switch <branch-name>``` or  ``` git checkout <branch-name>```
