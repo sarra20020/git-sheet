@@ -26,5 +26,18 @@
 ``` git branch <branch-name>```
     > will not swith to the created branch.
 
-- one you have created a new branch, we can switch to it
+- once you have created a new branch, we can switch to it
 ``` git switch <branch-name>``` or  ``` git checkout <branch-name>```
+    > to create a branch and switch on it ``` git switch -c <branch-name>``` or  ``` git checkout -b <branch-name>```
+
+- delete a branch
+``` git branch -D <branch-name>```
+    > we have to be into another branch while trying to delete a branch
+ - rename a branch
+ ``` git branch -m <branch-name>```
+    > we should be within the branch we want to rename
+
+- combine two branch, move to the destination branch and then use the following cmd
+``` git merge <branch-name>```
+    > A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch.
+    > In the event that you require a merge commit during a fast forward merge for record keeping purposes you can execute git merge with the --no-ffoption. ```git merge --no-ff <branch-name>```
