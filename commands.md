@@ -42,6 +42,6 @@
     > A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch.
     > In the event that you require a merge commit during a fast forward merge for record keeping purposes you can execute git merge with the --no-ffoption. ```git merge --no-ff <branch-name>```
 
-- view changes between commits, branches, files , our working dir ...etc
+- view changes between commits, branches, files , our working dir ...etc itshow the difference between new changes and the last commit 
     ``` git diff ``
 
