@@ -45,4 +45,4 @@
 - view changes between commits, branches, files , our working dir ...etc itshow the difference between new changes and the last commit 
     ``` git diff ``
 
-    > `git diff --staged` or `--cached` will list the changes between the staging area and our last commit, and to view for a particular fiel we can add the specific <file_name> in option
+    > `git diff --staged` or `--cached` will list the changes between the staging area and our last commit, and to view for a particular field we can add the specific <file_name> in option as `git diff HEAD [file_name]` or compre twoo files `git diff [file_name_1] [file_name_2]`
