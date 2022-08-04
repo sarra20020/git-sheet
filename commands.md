@@ -49,3 +49,10 @@
     ``` git diff ``
 
     > `git diff --staged` or `--cached` will list the changes between the staging area and our last commit, and to view for a particular field we can add the specific <file_name> in option as `git diff HEAD [file_name]` or compre twoo files `git diff [file_name_1] [file_name_2]`
+ 
+ - After renaming your banch remotely, then if you have a local clone, you can update it by running the following commands.
+
+git branch -m <previous_branch> <new_name>
+git fetch origin
+git branch -u origin/<new_name> <new_name>
+git remote set-head origin -a
