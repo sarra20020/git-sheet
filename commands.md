@@ -37,7 +37,7 @@
  ``` git branch -m <branch-name>```
     > we should be within the branch we want to rename
 
-- commit the new created  local branch with his content 
+- push the new created  local branch with his content 
     ```git push --set-upstream origin <branch_name>```
 
 - combine two branch, move to the destination branch and then use the following cmd
