@@ -37,6 +37,9 @@
  ``` git branch -m <branch-name>```
     > we should be within the branch we want to rename
 
+- push the new created  local branch with his content 
+    ```git push --set-upstream origin <branch_name>```
+
 - combine two branch, move to the destination branch and then use the following cmd
 ``` git merge <branch-name>```
     > A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch.
