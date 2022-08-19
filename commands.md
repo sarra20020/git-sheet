@@ -21,7 +21,7 @@
 ``` git commit -a -m"message" ```
 - list all branches existing in the current directory (CD)
 ``` git branch ```
-
+### branching
 - create a new branch
 ``` git branch <branch-name>```
     > will not swith to the created branch.
@@ -39,12 +39,12 @@
 
 - push the new created  local branch with his content 
     ```git push --set-upstream origin <branch_name>```
-
+### merging
 - combine two branch, move to the destination branch and then use the following cmd
 ``` git merge <branch-name>```
     > A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch.
     > In the event that you require a merge commit during a fast forward merge for record keeping purposes you can execute git merge with the --no-ffoption. ```git merge --no-ff <branch-name>```
-
+### diff
 - view changes between commits, branches, files , our working dir ...   etc itshow the difference between new changes and the last commit 
     ``` git diff ``` without additionnal options, it will list all hte changes in our working dir  that are Not staged for the next commit
 
@@ -64,3 +64,18 @@
     - `git stash list` display all existing stashes, Git assume you want to apply the most recent stash when you run `git stash apply` , but you can also specify a particular stash like `git stash apply stash@{id}`
     - `git stash drop stash@{id}` to delete a particular stash 
     - `git stash clear` will clear all stashes
+
+### Checkout and Time travelling
+
+- `git checkout <commit-hash>` will detach the head and point it to this particular commit 
+    > `git switch <branch_name>` will re-atach our head to branch name
+- `cat .git/HEAD` see the commit our head is referring to
+- ` git checkout HEAD <file_name>` or ` git checkout -- <file_name> ` will discard new changes added to the file name and will back to whatever it looked like in your last commit a.k.a where HEAD is still referencing 
+- `git restore <file_name>` is a new git Git brand command that helps wit un doing operations.Its restore using HEAD as the default source , but we can change that using the `--source ` option 
+- `git restore --source HEAD~2 <file(s)_name>` or `git restore --source <commit-hash> <file(s)_name>` will restore file(s) prior to the last 2 second commit
+- If you have accidentally added  file to your stagging area with `git add`  and you don't wish to include it to the next commit ,we can use ` git restore` as well to remove it from the staging area ---> `git restore --staged <file_name>`
+- `git reset`
+    > Regular reset : `git reset <commit-hash>` will reset the repo back to a specific commit without changing files content
+    > Hard reset : `git reset --hard <commit-hash>` (`git reset --hard HEAD~1` for the 1st commit ahead of HEAD) will delete the  specific commit and associated changes
+- `git revert ` similar to `git reset` it creates a brand new commit which reverses/undos the changes from a commit 
+    > `git revert` or `git reset` : If we want to reverse  some commits that other people already have on their machines , we should use *revert* if not shared yet we should use *reset*(and no one will ever know)
