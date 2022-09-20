@@ -79,3 +79,23 @@
     > Hard reset : `git reset --hard <commit-hash>` (`git reset --hard HEAD~1` for the 1st commit ahead of HEAD) will delete the  specific commit and associated changes
 - `git revert ` similar to `git reset` it creates a brand new commit which reverses/undos the changes from a commit 
     > `git revert` or `git reset` : If we want to reverse  some commits that other people already have on their machines , we should use *revert* if not shared yet we should use *reset*(and no one will ever know)
+
+
+## GitHub
+ - Definition :  *GitHub* is a hosting platform for git         repositories , meanwhile *Git* is a version control software that runs locally on your machine, no account, no internet needed to use git.
+
+ - `git clone` is a git  *not github* command to fetch a remote repo to local file
+
+ ### configuring SSH keys (ref docs: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+ -  first of all we need to veriry if there's existing ssh keys
+ so we tap the command `ls -al ~/.ssh`
+ - if no ssh keys available you can generate a new one :
+    > open a terminal
+    > `ssh-keygen -t ed25519 -C "your_email@example.com"`
+    > Note: If you are using a legacy system that doesn't support the Ed25519 algorithm, use: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+- Start the ssh-agent in the background
+    > `eval "$(ssh-agent -s)"`
+- Check if your ~/.ssh/config file exists in the default location
+    > open ~/.ssh/config or cd ~/.ssh/config if the file doesn't exist we could create a new one with `touch ~/.ssh/config`
+    
