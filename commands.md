@@ -98,4 +98,18 @@
     > `eval "$(ssh-agent -s)"`
 - Check if your ~/.ssh/config file exists in the default location
     > open ~/.ssh/config or cd ~/.ssh/config if the file doesn't exist we could create a new one with `touch ~/.ssh/config`
+    > follow the docs for more details.
+ ### viewing remotes
+ - `git remote or git remote -v` will list any existing remotes that we can run in our dir
+ > this command command will display nothing in case no remote repos is present in the current dir
+ > `git remote add <name> <url>` to add a new remote ex: *git remote add origin https;//github.com/blah/repo.git*
+ > **Origin** is a conventional Git remote name, can be changed
+ > `git remote rename <old> <new> ` to rename a remote
+ > `git remote remove <name>` will delete a remotes
+
+ ### Pushing your work 
+ - **`git push <remote> <branch>`** ex : *git push origin main*
+ - Before pushin we can rename our default branch to wahtever we want like `git branch -M <name>`
+
+
     
