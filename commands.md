@@ -112,4 +112,20 @@
  - **`git push <remote> <branch>`** ex : *git push origin main*
 
 ### Checking out remote branches
-    
+- Usually when we clone a repo we only get the default branch in the local dir  , by using *git branch -r* we can see all existing remotes branches but not tracked locally 
+    > `git switch <branch-name>` better than `git checkout --track origin/<branch-name>` will set up my branch locally
+
+### Fetching
+- Fetching allow us to download changes from a remote repo, BUT thos changes will not be automatically integrated into our working files. It let you see what others have been working on , without having to merge those changes into your local repo.
+    > `git fetch <remote>` command fetches branches and history from a specific remote repo. It only updates remote tracking branches.
+    > `git fetch origin` would fetch all changes from the origin remote repo. We can also fetch a specific branch from a remote using `git fetch <remote> <branch>`
+    > Helps to check others work without applying it locally to see changes we can use `git checkout origin/<branch>`
+
+### Pulling
+- **`git pull`** is another command we can use to retrieve changes from a remote repository.Unlike fetch , pull actually update HEAD branch with whatever changes are retrieved from the remote. it's like a *git push = git fetch + git merge*
+- To pull we specify the particular remote and branch we want too pull using `git pull <remote> <branch>`. Just like git merge , it matters WHERE we run this comand from.Whatever branch we run it from is where the chnagess will be merged into.
+- `git pull origin master` would fetch latest information from the origin's master branch and merge those changes into our current branch.
+- if we run `git pull` without specifying a particular remote or branch to pull from , git assumes the folowwing : 
+    > remote will default to origin
+    > branch will default to whatever tracking connection is configured for your current branch
+    > **Note**: THis behavio can be configured, and tracking connections can be changed manually, Most of people don't mess with that stuff
