@@ -110,6 +110,5 @@
  ### Pushing your work 
  - **`git push <remote> <branch>`** ex : *git push origin main*
  - Before pushin we can rename our default branch to wahtever we want like `git branch -M <name>`
-
-
+### Checking out remote branches
     
