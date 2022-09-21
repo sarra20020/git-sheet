@@ -106,10 +106,11 @@
  > **Origin** is a conventional Git remote name, can be changed
  > `git remote rename <old> <new> ` to rename a remote
  > `git remote remove <name>` will delete a remotes
+ > `git branch -r` to view remote branches our repository knows about
 
  ### Pushing your work 
  - **`git push <remote> <branch>`** ex : *git push origin main*
- - Before pushin we can rename our default branch to wahtever we want like `git branch -M <name>`
+ - Before pushin we can rename our default branch to whatever we want like `git branch -M <name>`
 
 
     
