@@ -1,5 +1,7 @@
 # My cheatsheet git commands
 
+- git config --global user.name "FIRST_NAME LAST_NAME"
+- git config --global user.email "MY_NAME@example.com"
 - configure default editor for commit messages
   `git config --global core.editor "code --wait"`
 
