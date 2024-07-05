@@ -39,8 +39,10 @@
 
   > we should be within the branch we want to rename
 
-- push the new created local branch with his content
+- push the new created local branch with his content and set the new upstream
   `git push --set-upstream origin <branch_name>`
+- push the new created local branch with his content
+  `git push  origin <branch_name>`
 
 ### Merging
 
