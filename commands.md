@@ -84,6 +84,13 @@
 - `git revert ` similar to `git reset` it creates a brand new commit which reverses/undos the changes from a commit
   > `git revert` or `git reset` : If we want to reverse some commits that other people already have on their machines , we should use _revert_ if not shared yet we should use _reset_(and no one will ever know)
 
+### Authors management
+
+- `git log --format='%aN'` this will show all unique authors in the repository history
+- `git shortlog -nse` for more detailed output
+- `git log --author="Author Name"` to show commits from a specific author or just using a part of the name: `git log --author="John"`
+- `git shortlog -sn` to show how many commits each author made a,d to group commits by author `git shortlog -nse`
+
 ## GitHub
 
 - Definition : _GitHub_ is a hosting platform for git repositories , meanwhile _Git_ is a version control software that runs locally on your machine, no account, no internet needed to use git.
@@ -142,3 +149,4 @@
 ### GitHub workflow
 
 - It's recommended to work with multiple branches while working in a team of lot of developers (since each contributor will make his own experiment, test, fix bugs), and then merge everything on a specific branch!
+- _Pull Request_ are feature built in to products like GitHub and Bibucket. They are not native to Git itself
