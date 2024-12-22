@@ -1,4 +1,5 @@
 # My cheatsheet git commands
+
 - configurer le username `git config user.name "username"`
 - configurer l'email `git config user.email "username@test.com"`
 - list global configuration `git config --global --list`
@@ -19,6 +20,8 @@
 
 - amend the previous commit message
   `git commit --amend `
+- commit
+ `git commit -m "message"` 
 - shortcut for staging and committing
   `git commit -a -m"message"`
 - list all branches existing in the current directory (CD)
