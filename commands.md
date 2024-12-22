@@ -1,5 +1,6 @@
 # My cheatsheet git commands
 
+- configure the initial default branch name `git config --global init.defaultBranch <branch_name>`
 - configurer le username `git config user.name "username"`
 - configurer l'email `git config user.email "username@test.com"`
 - list global configuration `git config --global --list`
