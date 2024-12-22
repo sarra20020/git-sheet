@@ -1,5 +1,6 @@
 # My cheatsheet git commands
-
+- configurer le username `git config user.name "username"`
+- configurer l'email `git config user.email "username@test.com"`
 - list global configuration `git config --global --list`
 - configure default editor for commit messages
   `git config --global core.editor "code --wait"`
@@ -26,7 +27,7 @@
 ### Branching
 
 - create a new branch
-  ` git branch <branch-name>` > will not swith to the created branch.
+  ` git checkout -b <branch-name>` > will not swith to the created branch.
 
 - once you have created a new branch, we can switch to it
   ` git switch <branch-name>` or ` git checkout <branch-name>` > to create a branch and switch on it ` git switch -c <branch-name>` or ` git checkout -b <branch-name>`
