@@ -97,6 +97,18 @@
 - `git log --author="Author Name"` to show commits from a specific author or just using a part of the name: `git log --author="John"`
 - `git shortlog -sn` to show how many commits each author made a,d to group commits by author `git shortlog -nse`
 
+### Tagging
+
+- `git tag` Listing the existing tags in Git is straightforward. Just type git tag (with optional -l or --list)
+- You can also search for tags that match a particular pattern `git tag -l "v1.8.5*"`
+- Git supports two types of tags: *lightweight* and *annotated*.
+- Creating an annotated tag in Git is simple. The easiest way is to specify -a when you run the tag command `git tag -a v1.4 -m "my version 1.4"`
+- You can see the tag data along with the commit that was tagged by using the git show command `git show v1.4`
+- Another way to tag commits is with a lightweight tag. This is basically the commit checksum stored in a file — no other information is kept `git tag v1.4-lw`
+- Now, suppose you forgot to tag the project at v1.2, which was at the “Update rakefile” commit. You can add it after the fact. To tag that commit, you specify the commit checksum (or part of it) at the end of the command: `git tag -a v1.2 9fceb02`
+- By default, the git push command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them. This process is just like sharing remote branches — you can run `git push origin <tagname>`
+- If you have a lot of tags that you want to push up at once, you can also use the --tags option to the git push command. This will transfer all of your tags to the remote server that are not already there `git push origin --tags`
+
 ## GitHub
 
 - Definition : _GitHub_ is a hosting platform for git repositories , meanwhile _Git_ is a version control software that runs locally on your machine, no account, no internet needed to use git.
