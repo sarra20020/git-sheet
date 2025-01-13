@@ -1,5 +1,9 @@
 # My cheatsheet git commands
 
+- configure the initial default branch name `git config --global init.defaultBranch <branch_name>`
+- configurer le username `git config user.name "username"`
+- configurer l'email `git config user.email "username@test.com"`
+- list global configuration `git config --global --list`
 - configure default editor for commit messages
   `git config --global core.editor "code --wait"`
 
@@ -17,6 +21,8 @@
 
 - amend the previous commit message
   `git commit --amend `
+- commit
+ `git commit -m "message"` 
 - shortcut for staging and committing
   `git commit -a -m"message"`
 - list all branches existing in the current directory (CD)
@@ -25,7 +31,7 @@
 ### Branching
 
 - create a new branch
-  ` git branch <branch-name>` > will not swith to the created branch.
+  ` git checkout -b <branch-name>` > will not swith to the created branch.
 
 - once you have created a new branch, we can switch to it
   ` git switch <branch-name>` or ` git checkout <branch-name>` > to create a branch and switch on it ` git switch -c <branch-name>` or ` git checkout -b <branch-name>`
@@ -90,6 +96,22 @@
 - `git shortlog -nse` for more detailed output
 - `git log --author="Author Name"` to show commits from a specific author or just using a part of the name: `git log --author="John"`
 - `git shortlog -sn` to show how many commits each author made a,d to group commits by author `git shortlog -nse`
+
+### Tagging
+
+- `git tag` Listing the existing tags in Git is straightforward. Just type git tag (with optional -l or --list)
+- You can also search for tags that match a particular pattern `git tag -l "v1.8.5*"`
+- Git supports two types of tags: *lightweight* and *annotated*.
+- Creating an annotated tag in Git is simple. The easiest way is to specify -a when you run the tag command `git tag -a v1.4 -m "my version 1.4"`
+- You can see the tag data along with the commit that was tagged by using the git show command `git show v1.4`
+- Another way to tag commits is with a lightweight tag. This is basically the commit checksum stored in a file — no other information is kept `git tag v1.4-lw`
+- Now, suppose you forgot to tag the project at v1.2, which was at the “Update rakefile” commit. You can add it after the fact. To tag that commit, you specify the commit checksum (or part of it) at the end of the command: `git tag -a v1.2 9fceb02`
+- By default, the git push command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them. This process is just like sharing remote branches — you can run `git push origin <tagname>`
+- If you have a lot of tags that you want to push up at once, you can also use the --tags option to the git push command. This will transfer all of your tags to the remote server that are not already there `git push origin --tags`
+- `git push <remote> --tags` will push both lightweight and annotated tags
+-  if you use `git push <remote> --follow-tags` only annotated tags will be pushed to the remote
+-  Delete Tags `git tag -d <tagname>` Note that this does not remove the tag from any remote servers. There are two common variations for deleting a tag from a remote server.
+The first variation is `git push <remote> :refs/tags/<tagname>`  The second (and more intuitive) way to delete a remote tag is with `git push origin --delete <tagname>`
 
 ## GitHub
 
